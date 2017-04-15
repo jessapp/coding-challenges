@@ -1,3 +1,6 @@
+# Given an amount (in cents) and a list of coin denominations, return the number of ways to make change from those denominations
+
+
 def make_change(amount, denominations):
 
     # Initialize a list of zeroes which is one item greater than the amount 
