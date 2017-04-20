@@ -57,14 +57,14 @@ class Node(object):
 def reverse_linked_list_in_place(lst):
     """Given linked list, reverse the nodes in this linked list in place."""
 
-    current = lst.head
     prev = None
+    curr = lst.head
 
-    while current is not None:
-        next = current.next
-        current.next = prev
-        prev = current
-        current = head
+    while curr is not None:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
 
     lst.head = prev
 

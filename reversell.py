@@ -50,7 +50,7 @@ def reverse_linked_list(head):
     while current is not None:
         new_head = Node(current.data, new_head)
         current = current.next
-
+        
     return new_head
 
 
