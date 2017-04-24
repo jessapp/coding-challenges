@@ -29,9 +29,12 @@ def fib_iterative(n):
     second_num = 1
 
     for i in range(n - 1):
+        print "i", i
         current = first_num + second_num
+        print "Current", current
         first_num = second_num
+        print "first num", first_num
         second_num = current
+        print "second num", second_num
 
     return current
-
