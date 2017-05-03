@@ -24,7 +24,6 @@ class GraphNode(object):
 
     def add_node(self, node):
         self.neighbors[self.count] = node
-        self.adjacentcount += 1
 
     def get_nodes(self):
         return self.neighbors
