@@ -10,6 +10,9 @@ def two_sum(nums, target):
         
         complement = target - num
         if complement in index_and_num:
-            return [index_and_num[num], index]
+            return [index_and_num[num], index_and_num[complement]]
 
     raise Exception("No two numbers add up to the target")
+
+
+print two_sum([1, 2, 3, 4], 7)
