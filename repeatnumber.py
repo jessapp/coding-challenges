@@ -5,15 +5,22 @@
 
 def repeat(lst, n):
 
-    # counts = {}
+    counts = {}
+
+    for num in lst:
+        counts[num] = counts.get(num, 0) + 1
+
+    for num, count in counts.items():
+        if count == 2:
+            return num
+
+    # Mathematical solution: 
+
+    # sum_all_nums = ((n ** 2) + n) / 2
+
+    # sum_input_list = 0
 
     # for num in lst:
-    #     counts[num] = counts.get(num, 0) + 1
+    #     sum_input_list += num
 
-    # for num, count in counts.items():
-    #     if count == 2:
-    #         return num
-
-    sum_all_nums = ((n ** 2) + n) / 2
-
-    sum_input_list = 
+    # return sum_input_list - sum_all_nums
