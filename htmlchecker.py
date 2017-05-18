@@ -27,4 +27,4 @@ def check_html(html_str):
     else:
         return False
 
-# future challenge: make a class, and build dict with HTML openers you encounter 
+# future challenge: make a class, and build dict with HTML openers you encounter Implement a stack using linked lists.
