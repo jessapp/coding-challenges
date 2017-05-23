@@ -16,3 +16,5 @@ def autocomplete(words, first_letter):
     else:
         print "No autocomplete possible for this word"
 
+
+autocomplete(["Hello", "Hi", "Good morning", "Falafel", "How Are You"], "H")
