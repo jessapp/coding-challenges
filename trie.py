@@ -19,10 +19,14 @@ class Trie:
                 current_node[char] = {}
             current_node = current_node[char]
 
+        print current_node
+
         # Explicitly mark the end of the word 
         
         if "End Of Word" not in current_node:
             is_new_word = True
             current_node['End Of Word'] = {}
+
+        print current_node
 
         return is_new_word
