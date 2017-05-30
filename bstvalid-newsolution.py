@@ -20,7 +20,7 @@ def check_balanced(root, lower_bound=None, upper_bound=None):
 
     # if you don't have either bound yet, go on to the next node
     if not upper_bound and not lower_bound:
-        return check_balanced(root.left, root.data, lower_bound) and check_balanced(root.right, upper_bound, root.data)
+        return check_balanced(root.left, lower_bound, root.data) and check_balanced(root.right, root.data, upper_bound)
     
     # if you have the lower bound, check against that
     elif not upper_bound:
@@ -38,4 +38,4 @@ def check_balanced(root, lower_bound=None, upper_bound=None):
             return False
 
     # Check if both sides are true
-    return check_balanced(root.left, root.data, lower_bound) and (root.right, upper_bound, root.data)
+    return return check_balanced(root.left, lower_bound, root.data) and check_balanced(root.right, root.data, upper_bound)

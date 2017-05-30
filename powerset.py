@@ -28,5 +28,6 @@ def powerset(string):
 
     return final
 
-print powerset("Hello")
+# print powerset("Hello")
+print powerset("cats")
 # print powerset(["1", "2", "3", "4"])

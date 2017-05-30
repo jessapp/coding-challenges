@@ -8,7 +8,7 @@ def recursive_permutations(string):
     all_chars_except_last = string[:-1]
     print "all chars", all_chars_except_last
     last_char = string[-1]
-    print "last char", last_char
+    print "last char", last_char 
 
     permutations_of_all_chars_except_last = recursive_permutations(all_chars_except_last)
     print "recurse", permutations_of_all_chars_except_last
