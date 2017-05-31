@@ -40,7 +40,7 @@ def count_nodes(root):
         count += 1
         to_count.extend(current.children)
 
-    # Total count minus the root itself
+    # Total count including root
     return count 
 
 
@@ -57,16 +57,18 @@ def nth_largest(root, n):
     elif right_count > n:
 
 
-        nodes = nodes_in_order(root.right)
 
-        final_index = len(nodes) - 1
 
-        target_index = final_index - n
+        # nodes = nodes_in_order(root.right)
 
-        for i in range(len(nodes)):
+        # final_index = len(nodes) - 1
 
-            if i == target_index:
-                return node_lst[i]
+        # target_index = final_index - n
+
+        # for i in range(len(nodes)):
+
+        #     if i == target_index:
+        #         return node_lst[i]
 
 
     # Otherwise, search the left side
@@ -84,5 +86,17 @@ def nth_largest(root, n):
 
             if i == target_index:
                 return node_lst[i]
-        
+
+def k_smallest(root, k, array=[]):
+
+    if root.left:
+        return k_smallest(root.left, k, array)
+
+    array.append(root.val)
+
+    if len(array) == k:
+        return array[-1]
+
+    if root.right:
+        return k_smallest(root.right, k, array)
 

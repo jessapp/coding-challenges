@@ -22,19 +22,34 @@ For example::
 def insertion_sort(alist):
     """Given a list, sort it using insertion sort."""
 
-    for i in range(1, len(alist)):
+    # starting at the second number in the list
+    for index in range(1, len(alist)):
+        print "index", index
 
-        j = i - 1
-        while j >= 0 and alist[j] > alist[i]:
-            j -= 1
-        j += 1
+        # find the current value at that index
+        current_value = alist[index]
+        print "current val", current_value
+        position = index
 
+        # while the index is greater than 0 AND and previous number is greater than
+        # the current number
+        while position > 0 and alist[position - 1] > current_value:
+            print "left val", alist[position - 1]
+            # put the previous number at this position 
+            alist[position] = alist[position - 1]
+            # and move the position backward to the left
+            position = position - 1
+            print "position", position
+            print "alist", alist
 
-        if j != i:
-            alist[j:i + 1] = alist[i:i + 1] + alist[j:i]
+        # Once the number is 
+        alist[position] = current_value
+        print "current val", current_value
 
     return alist
 
+
+print insertion_sort([32, 15, 67, 34, 9])
 
 if __name__ == '__main__':
     import doctest
