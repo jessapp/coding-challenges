@@ -45,9 +45,9 @@ class Deck(object):
     def __init__:
         self.stack = []
 
-        first_player_hand = []
+        self.first_player_hand = []
 
-        second_player_hand = []
+        self.second_player_hand = []
 
     def create_deck(self):
         """Creates deck of 52 cards"""
