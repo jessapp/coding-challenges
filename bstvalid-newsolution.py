@@ -38,4 +38,4 @@ def check_balanced(root, lower_bound=None, upper_bound=None):
             return False
 
     # Check if both sides are true
-    return return check_balanced(root.left, lower_bound, root.data) and check_balanced(root.right, root.data, upper_bound)
+    return check_balanced(root.left, lower_bound, root.data) and check_balanced(root.right, root.data, upper_bound)
