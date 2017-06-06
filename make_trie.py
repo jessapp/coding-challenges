@@ -36,6 +36,6 @@ def in_trie(trie, word):
                 return True
 
     return False
-=
+
 print in_trie(make_trie(["nap", "nape", "naples", "null"]), "apple")
 print in_trie(make_trie(['foo', 'bar', 'baz', 'barz']), 'baz')
