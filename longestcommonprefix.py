@@ -5,21 +5,15 @@ def longest_common_prefix(strings):
     if not strings:
         return ''
 
-    min_count = len(strings[0])
+    for i in range(len(strings[0])):
+        for string in strings[1:]:
+            # if i goes beyond the length of this string, or if the two letters
+            # are not the same
+            if i >= len(string) or string[i] != strings[0][i]:
+                # return the first string up until that point
+                return strings[0][:i]
+    # if the first string is encompassed completely within the rest, return it            
+    return strings[0]
 
-    shortest = strings[0]
 
-    for string in strings:
-        if len(string) < min_count:
-            min_count = len(string)
-            shortest = string
-
-    for i in range(len(shortest)):
-        for string in strings:
-            if string[i] != shortest[i]:
-                if i > 0:
-                    return shortest[:i]
-                else:
-                    return ''
-        return shortest
-
+print longest_common_prefix(["hello", "heaven", "heavy"])
