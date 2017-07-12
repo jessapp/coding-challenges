@@ -35,7 +35,7 @@ def recursive_index(needle, haystack, index=0):
     if haystack[index] == needle:
         return index
     
-    recursive_index(needle, haystack[1:], index + 1)
+    recursive_index(needle, haystack, index + 1)
 
 if __name__ == '__main__':
     import doctest
