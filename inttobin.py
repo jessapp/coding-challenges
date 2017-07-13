@@ -1,4 +1,4 @@
-# Convert a python into into a binary number
+# Convert a python int into a binary number
 
 class Stack:
     def __init__(self):
