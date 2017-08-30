@@ -1,26 +1,5 @@
 from sys import exit
-
-
-def start():
-    """Starts the program"""
-
-    print "Enter an integer number of primes to generate."
-    print "Type quit to exit the program"
-
-    choice = raw_input("Primes> ")
-
-    if choice == "quit":
-        print "Bye!"
-        exit()
-
-    elif choice.isdigit():
-        primes(choice)
-
-    else:
-        print "Invalid input"
-        start()
-
-
+import argparse
 
 def is_prime(num):
     """Helper function to check if a number is prime"""
@@ -51,7 +30,21 @@ def primes(count):
 
         num += 1
 
-    print "Primes: ", prime_nums
+    return prime_nums
 
 
-start()
+parser = argparse.ArgumentParser(description='Find a certain number of primes')
+
+parser.add_argument('-n', '--num_primes', help="choose how many primes to display", type=int)
+parser.add_argument('-o', '--output', help="output to a .txt file")
+
+args = parser.parse_args()
+
+answer = primes(args.num_primes)
+
+if not args.output:
+    print answer
+else:
+    text_file = open(str(args.output), "w")
+    text_file.write(str(answer))
+    text_file.close()
