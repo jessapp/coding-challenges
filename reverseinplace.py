@@ -9,15 +9,12 @@
 
 def reverse_in_place(head):
 
-    prev = None
-    current = head
+  prev = None
 
-    while current is not None:
-        next = current.next
-        current.next = prev
-        prev = current
-        current = next
+  while head:
+    current = head 
+    head = head.next
+    current.next = prev
+    prev = current 
 
-    lst.head = prev
-
-    return lst.head
+  return prev 

@@ -34,3 +34,28 @@ def longest_subsequence(input_str):
 
 
 print longest_subsequence("forgeeksskeegfor")
+
+
+# Dynamic programming solution:
+
+class Solution:   
+    def get_longest_pal(self, s, left, right):
+        while left >= 0 and right < len(s) and s[right] == s[left]:
+            left -= 1
+            right += 1
+        return s[left + 1:right]
+    
+    def longestPalindrome(self, s: str) -> str:
+        res = ""
+        for i in range(len(s)):
+            # Odd case
+            odd_pal = self.get_longest_pal(s, i, i)
+            if len(odd_pal) > len(res):
+                res = odd_pal
+            
+            # Even case
+            even_pal = self.get_longest_pal(s, i, i+1)
+            if len(even_pal) > len(res):
+                res = even_pal
+                
+        return res

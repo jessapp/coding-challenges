@@ -23,15 +23,23 @@
 
 # Alternate solution:
 
-# def contains_cycle(head):
-#     slow_runner = head
-#     fast_runner = head
+# def ll_cycle(ll):
+#     slow = ll.head
+#     fast = ll.head
 
-#     while fast_runner is not None and fast_runner.next is not None:
-#         slow_runner = slow_runner.next
-#         fast_runner = fast_runner.next.next
+#     while fast and fast.next:
+#         slow = slow.next
+#         fast = fast.next.next
+#         if fast == slow:
+#             break
 
-#     if fast_runner == slow_runner:
-#         return True
+#     if not fast and not fast.next:
+#         return None
 
-#     return False
+#     slow = ll.head
+
+#     while slow != fast:
+#         slow = slow.next
+#         fast = fast.next
+
+#     return slow 

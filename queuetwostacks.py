@@ -41,3 +41,5 @@ class Queue(object):
                 raise IndexError
 
         return self.stack2.pop()
+
+        

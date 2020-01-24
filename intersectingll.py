@@ -23,3 +23,37 @@ def check_intersection(ll1, ll2):
             return node
         else:
             return None
+
+# def intersecting_ll(ll1, ll2):
+
+#     ll1_count = 0
+#     ll2_count = 0
+
+#     ll1_head = ll1.head 
+#     ll2_head = ll2.head 
+
+#     while ll1_head:
+#         ll1_count += 1
+#         ll1_head = ll1_head.next 
+
+#     while ll2_head:
+#         ll2_head += 1
+#         ll2_head = ll2_head.next 
+
+#     diff = abs(ll1_count - ll2_count)
+
+#     ll1_head = ll1.head 
+#     ll2_head = ll2.head 
+
+#     if ll1_count > ll2_count:
+#         for i in range(diff):
+#             ll1_head = ll1_head.next
+#     elif ll2_count > ll1_count:
+#         for i in range(diff):
+#             ll2_head = ll2_head.next
+
+#     while ll1_head:
+#         if ll1_head == ll2_head:
+#             return ll2_head
+
+#     return None

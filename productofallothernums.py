@@ -30,3 +30,19 @@ def get_products_of_all_ints_except_at_index(num_lst):
 
 
 print get_products_of_all_ints_except_at_index([1, 7, 3, 4])
+
+
+# def product_of_all_other_nums(num_list):
+#     prod_list = []
+
+#     for i in range(len(num_list)):
+#         total = 1
+
+#         for index, num in enumerate(num_list):
+#             if index != i:
+#                 total *= num
+#         prod_list.append(total)
+
+#     return prod_list
+
+# product_of_all_other_nums([1, 2, 3, 4])
